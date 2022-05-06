@@ -1,5 +1,6 @@
 from turtle import Screen, Turtle
 from paddle import Paddle
+from ball import Ball
 import time
 
 screen = Screen()
@@ -18,20 +19,34 @@ screen.onkey(l_paddle.go_up, "w")
 screen.onkey(l_paddle.go_down, "s")
 
 
-ball = Turtle()
-ball.color("white")
-ball.penup()
-ball.shape("circle")
-ball.goto(0, 0)
+ball = Ball()
+
 
 game_is_on = True
 
 while game_is_on:
-    screen.update()
     time.sleep(0.1)
-    r_paddle
-    l_paddle
-    ball.forward(20)
+    screen.update()
+    ball.move()
+
+    #Detect colliosn with top and bottom
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce_y()
+
+    #Detect right paddle collision
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) and ball.xcor() < -320:
+        ball.bounce_x()
+
+    #Detect right paddle missed
+    if ball.xcor() > 380:
+        ball.reset_position()
+
+    #Detect left paddle missed
+    if ball.xcor() < -380:
+        ball.reset_position()
+
+
+
 
 
 
