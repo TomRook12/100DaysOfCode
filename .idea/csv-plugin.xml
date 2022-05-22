@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Day 25\London Boroughs Game\boroughs_to_learn.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Day 25\London Boroughs Game\london_boroughs.csv">
           <value>
             <Attribute>
@@ -25,6 +32,13 @@
           </value>
         </entry>
         <entry key="\Day 25\weather_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Day 26\nato_phonetic_alphabet.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
